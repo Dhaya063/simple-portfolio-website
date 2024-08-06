@@ -1,0 +1,1109 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-family: 'Poppins', sans-serif; 
+}
+
+
+:root {
+    --background-light: #ffffff;
+    --text-light: #000000;
+    --background-dark: #000000;
+    --text-dark: #ffffff;
+    --header-footer-light: #ffffff;
+    --header-footer-dark: #000000;
+    /* --neutral: rgb(220, 220, 220); */
+    --neutral: #8c8c8c;
+}
+
+html{
+    /* font-size: 62.5%; */
+    overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0 auto; /* Corrected margin syntax */
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+header{
+    margin-top: 20px;
+}
+
+header, footer {
+    background-color: var(--header-footer-light);
+    color: var(--text-light);
+    padding: 20px 0;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: var(--header-footer-dark);
+    color: var(--text-dark);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 100px;
+    font-size: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 30px;
+}
+
+nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover{
+    color:var(--neutral)
+}
+
+body.dark-mode nav ul li a {
+    color: var(--text-dark);
+}
+
+body.dark-mode nav ul li a:hover {
+    color: var(--neutral);
+}
+
+.toggle {
+    position: relative;
+    display: inline-block;
+}
+
+.toggle__input {
+    display: none;
+}
+
+.toggle__label {
+    display: block;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   
+}
+
+body.dark-mode .toggle__label {
+    background-color: #555;
+}
+
+.toggle__label::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: left 0.1s ease;
+}
+
+.toggle__input:checked + .toggle__label::after {
+    left: 32px;
+}
+
+/* Footer */
+/* footer {
+    background-color: var(--header-footer-light);
+    color: var(--text-light);
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode footer {
+    background-color: var(--header-footer-dark);
+    color: var(--text-dark);
+} */
+
+
+footer {
+    background-color: var(--header-footer-light);
+    color: var(--text-light);
+    padding: 10px 20px;
+    width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Set a max-width for better layout */
+}
+
+p {
+    margin: 0;
+    flex-grow: 1; /* Allow the text to take up available space */
+    text-align: center; /* Center the text within the space */
+}
+
+.go-up-button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--text-light); /* Text color */
+    background-color: var(--background-light); /* Background color */
+    border: 2px solid var(--text-light); /* Border color */
+    border-radius: 80px;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-content i{
+    margin-right: 8px; 
+}
+
+.go-up-button:hover {
+    background-color: var(--text-light); /* Background color on hover */
+    color: var(--background-light); /* Text color on hover */
+    border-color: var(--text-light); /* Border color on hover */
+    transform: scale(1.05);
+}
+
+body.dark-mode footer {
+    background-color: var(--header-footer-dark);
+    color: var(--text-dark);
+}
+
+body.dark-mode .go-up-button {
+    color: var(--text-dark); /* Text color in dark mode */
+    background-color: var(--background-dark); /* Background color in dark mode */
+    border: 2px solid var(--text-dark); /* Border color in dark mode */
+}
+
+body.dark-mode .go-up-button:hover {
+    background-color: var(--text-dark); /* Background color on hover in dark mode */
+    color: var(--background-dark); /* Text color on hover in dark mode */
+    border-color: var(--text-dark); /* Border color on hover in dark mode */
+}
+
+/* Font Styles */
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  .poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+
+/* Section */
+
+.homepage{
+    margin: 50px 100px;
+}
+
+/* Banner */
+section {
+    padding: 50px 0;
+}
+
+.banner h2{
+    margin: 0;
+    font-size: 32px;
+}
+
+.banner h1{
+    font-size: 75px;
+    margin: 0;
+    max-height: auto;
+}
+
+/* Button Base Styles */
+button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--text-light); /* Text color */
+    background-color: var(--background-light); /* Background color */
+    border: 2px solid var(--text-light); /* Border color */
+    border-radius: 50px;
+    margin: 30px 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.hire-me-button i{
+    margin-left: 5px;
+}
+
+/* Hover and Focus Effects */
+button:hover {
+    background-color: var(--text-light); /* Background color on hover */
+    color: var(--background-light); /* Text color on hover */
+    border-color: var(--text-light); /* Border color on hover */
+    transform: scale(1.05);
+    outline: none; /* Remove default outline on focus */
+}
+
+/* Dark Mode Styles */
+body.dark-mode button {
+    color: var(--text-dark); /* Text color in dark mode */
+    background-color: var(--background-dark); /* Background color in dark mode */
+    border: 2px solid var(--text-dark); /* Border color in dark mode */
+}
+
+body.dark-mode button:hover {
+    background-color: var(--text-dark); /* Background color on hover in dark mode */
+    color: var(--background-dark); /* Text color on hover in dark mode */
+    border-color: var(--text-dark); /* Border color on hover in dark mode */
+}
+
+.toggle__label::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    transition: left 0.1s ease;
+    background-image: url('/assets/images/sun.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(255, 213, 0);
+}
+
+body.dark-mode .toggle__label::after{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    transition: left 0.1s ease;
+    background-image: url('/assets/images/moon.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Adjust the image when the toggle is checked */
+.toggle__input:checked + .toggle__label::after {
+    left: 32px;
+}
+
+/* Carousel Container */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100px; /* Adjust height as needed */
+}
+
+/* Carousel Container */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto; /* Adjust height as needed */
+    overflow-x: hidden;
+  mask-image: linear-gradient(
+    to right,
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 1) 5%,
+    hsl(0 0% 0% / 1) 80%,
+    hsl(0 0% 0% / 0)
+  );
+}
+
+/* Carousel Images */
+.carousel-images {
+    display: flex;
+    width: 200%; /* Double the width of the viewport */
+    animation: scroll-left 10s linear infinite;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Individual Image */
+.carousel-images img {
+    width: 75px; /* Adjust size as needed */
+    height: 75px;
+    padding: 20px;
+    border-radius: 20%;
+    background-color: var(--background-light);
+}
+
+
+/* Keyframes for Carousel Animation */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* Case Studies */
+
+#case-studies {
+    padding: 20px;
+}
+
+.case-studies h2{
+    font-size: 30px;
+     margin: 30px 0 30px 0;
+}
+
+.case-study-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.case-study {
+    flex: 1 1 calc(50% - 30px); /* 50% width minus gap */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.case-study img {
+    /* width: 100%;
+    height: 500px;
+    border-radius: 30px;
+    object-fit: fill; */
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    object-position: center center;
+    object-fit: contain;
+    image-rendering: auto;
+    background-color: #000000;
+}
+
+.case-study-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 100%; /* Ensure the info stays within image boundaries */
+    padding: 10px;
+}
+
+.case-study-link {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.case-study-link:hover,
+body.dark-mode .case-study-link:hover{
+    color: var(--neutral);
+}
+
+.case-study-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light); /* Text color */
+    background-color: var(--background-light); /* Background color */
+    border: 2px solid var(--text-light); /* Border color */
+    border-radius: 50px;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+}
+
+.case-study-arrow i {
+    font-size: 20px;
+}
+
+.case-study-arrow:hover {
+    background-color: var(--text-light); /* Background color on hover */
+    color: var(--background-light); /* Text color on hover */
+    border-color: var(--text-light); /* Border color on hover */
+    transform: scale(1.05);
+}
+
+/* Dark Mode Styles */
+body.dark-mode .case-study-link,
+body.dark-mode .case-study-arrow {
+    color: var(--text-dark); /* Text color in dark mode */
+}
+
+body.dark-mode .case-study-arrow {
+    background-color: var(--background-dark); /* Background color in dark mode */
+    border-color: var(--text-dark); /* Border color in dark mode */
+}
+
+body.dark-mode .case-study-arrow:hover {
+    background-color: var(--text-dark); /* Background color on hover in dark mode */
+    color: var(--background-dark); /* Text color on hover in dark mode */
+    border-color: var(--text-dark); /* Border color on hover in dark mode */
+}
+
+
+
+/* Experience Section */
+#experience {
+    padding: 10px;
+}
+
+.experience h2 {
+    font-size: 30px;
+    margin: 30px 0 30px 0;
+}
+
+.experience-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.experience-text {
+    max-width: 80%; /* Adjust width as needed */
+}
+
+.experience-text h3 {
+    margin: 0 0 10px 0;
+}
+
+.experience-text h1 {
+    margin: 0 0 10px 0;
+    font-size: 36px;
+}
+
+.experience-text p {
+    margin: 0;
+    text-align: left;
+    font-size: 20px;
+}
+
+.visit-button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--text-light); /* Text color */
+    background-color: var(--background-light); /* Background color */
+    border: 2px solid var(--text-light); /* Border color */
+    border-radius: 80px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+    width: 40px; /* Initial width */
+    transition: width 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+}
+
+.visit-button i {
+    position: absolute;
+    right: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 20px;
+    text-align: center;
+}
+
+.visit-button:hover {
+    width: 50px; /* Expanded width */
+    text-align: left;
+}
+
+.visit-button:hover i {
+    opacity: 1;
+    padding-top: 2px;
+}
+
+.visit-button:hover {
+    background-color: var(--text-light); /* Background color on hover */
+    color: var(--background-light); /* Text color on hover */
+    border-color: var(--text-light); /* Border color on hover */
+    transform: scale(1.05);
+}
+
+/* Dark Mode Styles */
+body.dark-mode .visit-button {
+    color: var(--text-dark); /* Text color in dark mode */
+    background-color: var(--background-dark); /* Background color in dark mode */
+    border: 2px solid var(--text-dark); /* Border color in dark mode */
+}
+
+body.dark-mode .visit-button:hover {
+    background-color: var(--text-dark); /* Background color on hover in dark mode */
+    color: var(--background-dark); /* Text color on hover in dark mode */
+    border-color: var(--text-dark); /* Border color on hover in dark mode */
+}
+
+
+/* Hire Me Section */
+
+#hire-me {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hire-me-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 100px;
+}
+
+.hire-me-content {
+    max-width: 50%;
+}
+
+.hire-me-content h1 {
+    margin-bottom: 20px;
+    font-size: 100px;
+}
+
+
+.social-links {
+    display: flex;
+    gap: 30px;
+}
+
+.social-link {
+    font-size: 40px;
+    color: var(--text-light);
+    transition: color 0.3s ease;
+    padding-left: 10px;
+}
+
+.social-link:hover {
+    color: var(--neutral);
+}
+
+/* Circle Link */
+.circle-link {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid var(--text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.1s ease;
+    text-decoration: none;
+    margin-bottom: 80px;
+}
+
+.circle-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rotating-arrow {
+    font-size: 36px;
+    color: var(--text-light);
+    animation: rotate 5s linear infinite;
+    transition: opacity 0.3s ease;
+}
+
+.hire-me-text {
+    position: absolute;
+    font-size: 24px;
+    color: var(--text-dark);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+.circle-link:hover .rotating-arrow {
+    opacity: 0;
+    animation: none;
+}
+
+.circle-link:hover {
+    cursor: e-resize; /* Change cursor to east-resize on hover */
+    background-color: var(--background-dark);
+}
+
+.circle-link:hover .hire-me-text {
+    opacity: 1;
+}
+
+/* Keyframes for rotating animation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-mode .social-link,
+body.dark-mode .circle-link,
+body.dark-mode .rotating-arrow{
+    color: var(--text-dark);
+    border-color: var(--text-dark);
+}
+
+body.dark-mode .social-link:hover{
+    color:var(--neutral);
+}
+
+body.dark-mode .circle-link:hover {
+    cursor: e-resize;
+    background-color: var(--background-light);
+}
+
+body.dark-mode .hire-me-text{
+    color: var(--text-light);
+}
+
+
+
+/* Case Study Pages */
+
+.case-study-details-page{
+    margin: 10px 100px;
+}
+
+/* Base Styles for Back Button */
+
+.back-button {
+    /* top: 80px;  */
+    z-index: 1000; 
+    margin-bottom: 50px;
+}
+
+.back-link {
+    /* display: flex;  */
+    align-items: center; 
+    font-size: 16px; 
+    color: rgb(156, 153, 153);  
+    transition: color 0.3s ease;
+
+}
+
+.back-link:hover {
+    color: var(--background-dark); /* Text color on hover */
+}
+
+.back-link i {
+    margin-right: 5px; /* Space between the icon and text */
+}
+
+body.dark-mode .back-link:hover{
+    color: var(--text-dark);
+}
+
+/* Base Styles */
+
+#case-study-details {
+    text-align: left; /* Center-align text content */
+    max-width: auto; /* Limit the width for better readability */
+    margin: 0 auto; /* Center the section horizontally */
+}
+
+/* Title */
+#case-study-details h1 {
+    font-size: 36px; /* Adjust font size */
+    color: #000000; /* Dark gray color */
+    margin-bottom: 30px; /* Space below the title */
+}
+
+/* Paragraph */
+#case-study-details p {
+    font-size: 20px; /* Adjust font size */
+    color: #000000; /* Medium gray color */
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 30px; /* Space below the paragraph */
+    text-align: left;
+}
+
+
+/* Image */
+#case-study-details img {
+    /* width: 100%; 
+    height: 500px; 
+    border-radius: 20px; 
+    margin-top: 100px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 50px;
+   object-fit: fill; */
+
+
+   display: block;
+    width: 100%;
+    height: 500px;
+    margin-top: 150px;
+    border-radius: 50px;
+    object-position: center center;
+    object-fit: cover;
+    image-rendering: auto;
+}
+
+/* Dark Mode Styles */
+body.dark-mode .case-study-details {
+    color: var(--text-dark); /* Light text color in dark mode */
+}
+
+/* Dark Mode Styles */
+body.dark-mode #case-study-details h1 {
+    color: #ffffff; /* White color for dark mode */
+}
+
+body.dark-mode #case-study-details p {
+    color: #e0e0e0; /* Light gray color for dark mode */
+}
+
+/* Case Study Visit BUTTON */
+.case-study-visit-button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--text-light); /* Initial text color */
+    background-color: var(--background-light); /* Initial background color */
+    border: 2px solid var(--text-light); /* Initial border color */
+    border-radius: 80px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    overflow: hidden;
+    position: absolute;
+    width: 70px;/* Initial width for visibility of text */
+    transition: width 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+  }
+  
+  .case-study-visit-button i {
+    position: absolute;
+    right: 10px;
+    opacity: 0; /* Initial opacity */
+    transition: opacity 0.3s ease;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 2px;
+  }
+  
+  .case-study-visit-button:hover {
+    width: 100px; /* Expanded width on hover */
+    text-align: left;
+    background-color: var(--text-light); /* Background color on hover */
+    color: var(--background-light); /* Text color on hover */
+    border-color: var(--text-light); /* Border color on hover */
+    transform: scale(1.05); /* Slight scaling effect */
+  }
+  
+  .case-study-visit-button:hover i {
+    opacity: 1; /* Show icon on hover */
+    right: 15px; /* Ensure icon moves slightly */
+  }
+  
+  /* Dark Mode Styles */
+  body.dark-mode .case-study-visit-button {
+    color: var(--text-dark); /* Text color in dark mode */
+    background-color: var(--background-dark); /* Background color in dark mode */
+    border: 2px solid var(--text-dark); /* Border color in dark mode */
+  }
+  
+  body.dark-mode .case-study-visit-button:hover {
+    background-color: var(--text-dark); /* Background color on hover in dark mode */
+    color: var(--background-dark); /* Text color on hover in dark mode */
+    border-color: var(--text-dark); /* Border color on hover in dark mode */
+  }
+  
+
+  /********* Problem Statement && Solution && Result *********/
+
+  #cs-problem-statement ,
+  #cs-solution,
+  #cs-result{
+    display: flex;
+    justify-content: space-between; /* Distribute space between h2 and p */
+    gap: 20px; /* Add gap between elements if needed */
+}
+
+#cs-problem-statement h2,
+#cs-solution h2,
+#cs-result h2{
+    font-size: 24px; /* Adjust font size as needed */
+    color: #000000; /* Text color */
+    margin: 0; /* Remove default margin */
+}
+
+#cs-problem-statement p ,
+#cs-solution p,
+#cs-result p{
+    font-size: 18px; /* Adjust font size as needed */
+    color: #333333; /* Text color */
+    margin: 0; /* Remove default margin */
+    max-width: 70%; /* Adjust width as needed */
+    text-align: left; /* Align text to the right */
+}
+
+/* Dark Mode Styles */
+body.dark-mode #cs-problem-statement h2 ,
+body.dark-mode #cs-solution h2,
+body.dark-mode #cs-result h2{
+    color: #ffffff; /* White color for dark mode */
+}
+
+body.dark-mode #cs-problem-statement p ,
+body.dark-mode #cs-solution p,
+body.dark-mode #cs-result p{
+    color: #e0e0e0; /* Light gray color for dark mode */
+}
+
+/* Images */
+
+#cs-images {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the images horizontally */
+    align-items: center; /* Center the images vertically */
+    padding: 50px; /* Add padding around the section */
+}
+
+.image-container {
+    display: flex; /* Use flexbox for layout */
+    gap: 20px; /* Space between images */
+}
+
+.cs-image {
+    width: 500px; /* Ensure the images are responsive */
+    max-width: 100%; /* Limit the maximum width of each image */
+    height: 500px; /* Maintain aspect ratio */
+    border-radius: 50px; /* Optional: add rounded corners */
+    object-fit: cover; /* Cover the image area */
+    /* padding: 20px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shading */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Dark Mode Styles */
+body.dark-mode #cs-images .cs-image {
+    filter: brightness(0.8); /* Optional: adjust brightness for dark mode */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Adjust shading for dark mode */
+}
+
+/* Optional: Hover Effect */
+.cs-image:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance shading on hover */
+}
+
+
+/* Imagery */
+
+#cs-imagery {
+    display: flex;
+    justify-content: space-between; /* Distribute space between h2 and p */
+    gap: 20px; /* Add gap between elements if needed */
+
+}
+
+#cs-imagery .content-container {
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: space-between;
+    width: 100%; /* Ensure the container uses full width */
+}
+
+#cs-imagery h2 {
+    font-size: 24px; /* Adjust font size */
+    color: #000000; /* Dark gray color */
+    margin: 0; /* Remove default margin */
+    width: 25%; /* Adjust width for positioning */
+}
+
+#cs-imagery .text-container {
+    display: flex; /* Flexbox for vertical layout */
+    flex-direction: column; /* Stack p tags vertically */
+    gap: 20px; /* Space between p tags */
+    width: 70%; /* Adjust width for positioning */
+}
+
+#cs-imagery p {
+    font-size: 16px; /* Adjust font size */
+    color: #000000; /* Medium gray color */
+    line-height: 1.6; /* Improve readability */
+    margin: 0; /* Remove default margin */
+    text-align: left; /* Align text to the left */
+    max-width: 100%; /* Adjust width as needed */
+    text-align: left; /* Align text to the right */
+}
+
+/* Dark Mode Styles */
+body.dark-mode #cs-imagery h2 {
+    color: #ffffff; /* Light color for dark mode */
+}
+
+body.dark-mode #cs-imagery p {
+    color: #dddddd; /* Light gray color for dark mode */
+}
+
+
+/* Media Queries */
+
