@@ -508,7 +508,7 @@ body.dark-mode .toggle__label::after{
 
 .case-study img {
     display: block;
-    width: 600px;
+    width: 550px;
     height: 500px;
     border-radius: 50px;
     object-position: bottom;
@@ -525,7 +525,7 @@ body.dark-mode .case-study img{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 550px;
+    width: 500px;
     max-width: 100%; /* Ensure the info stays within image boundaries */
     padding: 10px;
     margin: 20px 0;
