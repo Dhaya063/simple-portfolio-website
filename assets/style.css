@@ -67,6 +67,30 @@ body.dark-mode footer {
     color: var(--text-dark);
 }
 
+/* .logo-name img{
+    width: 70px;
+    height: 70px;
+    border-radius: 20%;
+}
+
+.logo-white{
+    display: none;
+}
+
+body.dark-mode  .logo-white{
+   display: block;
+   background-color: #ccc;
+}
+
+body.dark-mode  .logo-black{
+    display: none;
+ } */
+
+ .logo-name p{
+    font-weight: bolder;
+    font-size: 24px;
+ }
+
 nav {
     display: flex;
     align-items: center;
@@ -410,7 +434,7 @@ body.dark-mode button:hover {
     height: 26px;
     border-radius: 50%;
     transition: left 0.1s ease;
-    background-image: url('/assets/images/sun.png'); /* Replace with your image path */
+    background-image: url('/assets/images/logo/sun.png'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
     background-color: rgb(255, 213, 0);
@@ -425,7 +449,7 @@ body.dark-mode .toggle__label::after{
     height: 26px;
     border-radius: 50%;
     transition: left 0.1s ease;
-    background-image: url('/assets/images/moon.png'); /* Replace with your image path */
+    background-image: url('/assets/images/logo/moon.png'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
 }
