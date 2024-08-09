@@ -40,4 +40,42 @@ function scrollToTop() {
 // });
 
 
+// let menuIcon = document.querySelector('#menu-icon');
+// let navbar = document.querySelector('.nav-right');
+// let homepage = document.querySelector('.homepage');
+
+// menuIcon.onclick = () => {
+//     menuIcon.classList.toggle('fa-x'); 
+//     navbar.classList.toggle('active');
+
+//     // Adjust section position when the navigation bar is active
+//     if (navbar.classList.contains('active')) {
+//         homepage.style.transform = 'translateY(60px)';
+//     } else {
+//         homepage.style.transform = 'translateY(0)';
+//     }
+// };
+
+
+
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.nav-right');
+let homepage = document.querySelector('.homepage');
+let footer = document.querySelector('.footer');
+
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle('fa-x'); 
+    navbar.classList.toggle('active');
+
+    // Adjust section position when the navigation bar is active
+    if (navbar.classList.contains('active')) {
+        homepage.style.transform = 'translateY(' + navbar.offsetHeight + 'px)';
+        footer.style.transform = 'translateY(' + navbar.offsetHeight + 'px)';
+
+    } else {
+        homepage.style.transform = 'translateY(0)';
+        footer.style.transform = 'translateY(0)';
+
+    }
+};
 

@@ -14,18 +14,21 @@
 </head>
 <body class="poppins-regular">
     <header>
-        <nav>
+        <nav class="navbar" id="navbar">
             <div class="logo-name poppins-semibold">
                 <p>Varsha Ravisankar</p>
             </div>
-            <ul> 
-                <li><a href="#case-studies" class="poppins-medium">Case Studies</a></li>
-                <li><a href="#experience" class="poppins-medium">Experience</a></li>
-                <li><a href="#hire-me" class="poppins-medium">Resume</i></a></li>
-            </ul>
-            <div class="toggle">
-                <input type="checkbox" id="mode-toggle" class="toggle__input">
-                <label for="mode-toggle" class="toggle__label"></label>
+            <i class="fa-solid fa-bars" id="menu-icon" aria-hidden="true"></i>
+            <div class="nav-right">
+                <ul class="navbar-link"> 
+                    <li><a href="#case-studies" class="poppins-medium">Case Studies</a></li>
+                    <li><a href="#experience" class="poppins-medium">Experience</a></li>
+                    <li><a href="assets/images/Resume/Varsha Ravisankar Resume.pdf" class="poppins-medium" target="_blank">Resume</i></a></li>
+                </ul>
+                <div class="toggle">
+                    <input type="checkbox" id="mode-toggle" class="toggle__input">
+                    <label for="mode-toggle" class="toggle__label"></label>
+                </div>
             </div>
         </nav>
     </header>
@@ -74,7 +77,7 @@
                         <a href="https://www.behance.net/gallery/173407645/E-traders-Mobile-App" class="case-study-arrow" target="_blank"><i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="case-study">
+                <div class="case-study food-spot">
                     <img src="assets/images/case-study/foodspot.png" alt="Food Spot Homepage Image">
                     <div class="case-study-info">
                         <a href="https://www.behance.net/gallery/149378975/FOOD-SPOT-UXUI-CaseStudy" class="case-study-link" target="_blank">Food Spot</a>
@@ -119,7 +122,6 @@
                         Collaborated with marketing team to contribute for content creation on Instagram and YouTube, elevating brand storytelling.
                     </p>
                 </div>
-                <a href="#visit" class="visit-button">Visit <i class="fas fa-arrow-right"></i></a>
             </div>
         
             <!-- Experience 2 -->
@@ -132,7 +134,6 @@
                         Created low- fidelity wireframes and high-fidelity prototypes to align design concepts with client requirements and enhance user experience.
                     </p>
                 </div>
-                <a href="#visit" class="visit-button">Visit <i class="fas fa-arrow-right"></i></a>
             </div>
         </section>
         
@@ -144,20 +145,20 @@
                     <div class="social-links">
                         <a href="https://www.behance.net/rvarsha" class="social-link" target="_blank"> <i class="fab fa-behance"></i></a>
                         <a href="https://www.linkedin.com/in/varsharavisankar/" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://dribbble.com/Var-sha-uix" class="social-link" target="_blank"> <i class="fab fa-dribbble"></i></a>
+                        <a href="https://dribbble.com/Var-sha-uix" class="social-link" target="_blank"> <i class="fa-solid fa-basketball"></i></a>
                     </div>
                 </div>
                 <a href="mailto:varsharavisankar0705@gmail.com" class="circle-link">
                     <div class="circle-content">
                         <span class="rotating-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
-                        <span class="hire-me-text">Mail Me</span>
+                        <span class="hire-me-text">Let's Talk</span>
                     </div>
                 </a>
             </div>
         </section>
 
     </main>
-    <footer>
+    <footer class="footer">
         <div class="footer-content">
             <p class="poppins-medium">&copy; 2024 - Varsha Ravishankar</p>
             <button class="go-up-button" onclick="scrollToTop()">

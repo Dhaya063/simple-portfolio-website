@@ -75,6 +75,13 @@ nav {
     font-size: 20px;
 }
 
+.nav-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -102,6 +109,11 @@ body.dark-mode nav ul li a {
 
 body.dark-mode nav ul li a:hover {
     color: var(--neutral);
+}
+
+#menu-icon{
+    font-size: 32px;
+    display: none;
 }
 
 .toggle {
@@ -516,6 +528,9 @@ body.dark-mode .toggle__label::after{
     image-rendering: auto;
     box-shadow: 0 2px 8px rgba(17, 17, 17, 0.2);
 }
+.food-spot img{
+   overflow: hidden;
+}
 
 body.dark-mode .case-study img{
     box-shadow: 0 2px 8px rgba(238, 238, 238, 0.2);
@@ -608,7 +623,7 @@ body.dark-mode .case-study-arrow:hover {
 }
 
 .experience-text {
-    max-width: 80%; /* Adjust width as needed */
+    max-width: 100%; /* Adjust width as needed */
 }
 
 .experience-text h3 {
@@ -815,14 +830,245 @@ body.dark-mode .hire-me-text{
 
 /* Media Queries */
 
-@media only screen and (max-width: 1024px) {
+/* Mobile devices – 480px and below */
+@media (max-width: 480px) {
+    /* Add your styles for mobile devices here */
+     /* Add your styles for mobile devices here */
+     /* .homepage{
+        margin: 10px 20px;
+    }
+header{
+    width: auto;
+    z-index: 100;
+}
+    #menu-icon{
+        display: block;
+    }
 
-*{
+    .nav-right{
+        display: none;
+    }
+
+    .active{
+        display: block;
+    }
+    
+    nav {
+        padding: 5px 25px;
+        font-size: 16px;
+    }
+    
+    nav ul li {
+        font-size: 12px;
+    } */
+    .homepage {
+        margin: 10px 20px;
+        /* transition: transform 0.3s ease-in-out; */
+    }
+
+    header {
+        width: auto;
+        z-index: 100;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .nav-right {
+        display: none; /* Initially hide the nav-right */
+        position: absolute;
+        top: 100%; /* Position it right below the header */
+        right: 100px; /* Align it to the right side */
+        width: 200px; /* Adjust width as needed */
+        z-index: 999;
+        text-align: center; /* Align text to the right */
+    }
+
+    .toggle{
+        margin-top: 10px;
+    }
+
+    .nav-right.active {
+        display: block; /* Show nav-right when active */
+    }
+    
+    nav {
+        padding: 5px 25px;
+        font-size: 16px;
+        position: relative;
+    }
+    
+    .navbar-link {
+        display: flex;
+        flex-direction: column; /* Arrange items one below the other */
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar-link li {
+        font-size: 14px;
+        margin: 5px 0;
+        list-style: none; /* Remove bullet points */
+    }
+
+    .navbar-link a {
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+    }
+    section {
+        padding: 20px 0;
+    }
+    
+    .banner h2{
+        margin: 0 auto;
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 30px;
+        
+    }
+    
+    .banner-name{
+        font-size: 20px;
+    }
+    
+    .banner h1{
+        font-size: 30px;
+        margin: 0;
+    }
+
+    button {
+    font-size: 16px;
+    padding: 5px 15px;
+    }
+
+    .carousel-images {
+        gap: 60px;
+    }
+    
+    .carousel-images img {
+        width: 50px; 
+        height: 50px;
+        padding: 15px;
+    }
+    
+    .case-study-grid {
+        gap: 20px;
+       
+    }
+
+    .case-studies h2{
+    font-size: 24px;
+     margin: 0 0 30px 0;
+    }
+    
+    .case-study {
+        flex: 1 1 calc(50% - 20px);
+    }
+    .case-study img {
+        width: 320px;
+        height: 300px;
+         border-radius: 30px;
+    }
+    
+    .case-study-info {
+        width: 300px;
+    }
+    
+    .case-study-link {
+        font-size: 16px;
+    }
+    
+    .case-study-arrow {
+        border-radius: 50px;
+        padding: 5px 10px;
+        width: 20px;
+        height: 20px;
+    }
+    .case-study-arrow i {
+        font-size: 16px;
+    }
+    
+.experience-content {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+    
+.experience h2 {
+    font-size: 24px;
+    margin: 20px 0 20px 0;
+}
+
+.experience-text h3 {
+   font-size: 16px;
+}
+    
+    .experience-text h1 {
+        font-size: 18px;
+    }
+                
+    .experience-text p {
+        font-size: 16px;
+    }
+    
+    .hire-me-content {
+        max-width: 35%;
+    }
+    
+    .hire-me-content h1 {
+        font-size: 35px;
+    }
+    
+    .social-link {
+        font-size: 25px;
+    }
+    
+    .circle-link {
+        width: 100px;
+        height: 100px;
+    }
+
+    footer{
+         padding: 0px;
+          width: 100%;
+    }
+    
+    .footer-content {
+        width: 100%;
+        padding: 0 30px;
+       
+    }
+
+    .footer-content p{
+        font-size: 12px;
+    }
+    .go-up-button {
+    font-size: 12px;
+    border-radius: 80px;
+    padding: 10px;
+}
+
+.footer-content i{
+    margin-right: 4px; 
+}
+  }
+  
+  /* iPads and Tablets – 481px — 768px */
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    /* Add your styles for iPads and tablets here */
+  }
+  
+  /* Small screens and Laptops – 769px — 1024px */
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+   
+    
+/* *{
     max-width: 1024px;
 }
 
 .homepage{
-    margin: 20px 50px;
+    margin: 20px 30px;
 }
 
 nav {
@@ -904,6 +1150,130 @@ section {
 footer {
     padding: 0px;
     width: 100%;
+} */
+
+
+
+.homepage{
+    margin: 20px 30px;
 }
 
+nav {
+    padding: 5px 50px;
+    font-size: 16px;
 }
+
+nav ul li {
+    margin: 0 15px;
+}
+
+section {
+    padding: 50px 0;
+}
+
+.banner h2{
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.banner-name{
+    font-size: 20px;
+}
+
+.banner h1{
+    font-size: 40px;
+    margin: 0;
+    max-height: auto;
+}
+
+.carousel-images {
+    gap: 60px;
+}
+
+.carousel-images img {
+    width: 60px; 
+    height: 60px;
+    padding: 15px;
+}
+
+.case-study-grid {
+    gap: 20px;
+   
+}
+
+.case-study {
+    flex: 1 1 calc(50% - 20px);
+}
+.case-study img {
+    width: 320px;
+    height: 300px;
+     border-radius: 30px;
+}
+
+.case-study-info {
+    width: 300px;
+}
+
+.case-study-link {
+    font-size: 16px;
+}
+
+.case-study-arrow {
+    border-radius: 50px;
+    padding: 5px 10px;
+    width: 20px;
+    height: 20px;
+}
+.case-study-arrow i {
+    font-size: 16px;
+}
+
+      
+.experience-text h1 {
+    font-size: 30px;
+}
+            
+.experience-text p {
+    font-size: 18px;
+}
+
+.hire-me-content {
+    max-width: 75%;
+}
+
+.hire-me-content h1 {
+    font-size: 60px;
+}
+
+.social-link {
+    font-size: 40px;
+    color: var(--text-light);
+    transition: color 0.3s ease;
+    padding-left: 10px;
+}
+
+.circle-link {
+    width: 150px;
+    height: 150px;
+}
+
+.footer-content {
+    width: 90%;
+}
+
+footer {
+    padding: 0px;
+    width: 100%;
+}
+  }
+  
+  /* Large screens and Desktops – 1025px — 1200px */
+  @media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    /* Add your styles for large screens and desktops here */
+  }
+  
+  /* TV and Extra Large Screens – 1201px and more */
+  @media only screen and (min-width: 1201px) {
+    /* Add your styles for TV and extra-large screens here */
+  }
+  
