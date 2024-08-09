@@ -1053,6 +1053,11 @@ header{
         height: 100px;
     }
 
+    .hire-me-text {
+       
+        font-size: 14px;
+    }
+
     footer{
          padding: 0px;
           width: 100%;
