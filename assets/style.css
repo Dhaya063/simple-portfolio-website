@@ -552,9 +552,6 @@ body.dark-mode .toggle__label::after{
     image-rendering: auto;
     box-shadow: 0 2px 8px rgba(17, 17, 17, 0.2);
 }
-.food-spot img{
-   overflow: hidden;
-}
 
 body.dark-mode .case-study img{
     box-shadow: 0 2px 8px rgba(238, 238, 238, 0.2);
